@@ -1,0 +1,7 @@
+export { default as Hero } from './Hero';
+export { default as ProblemAgitation } from './ProblemAgitation';
+export { default as Transformation } from './Transformation';
+export { default as Features } from './Features';
+export { default as FAQ } from './FAQ';
+export { default as AboutUs } from './AboutUs';
+export { default as Footer } from './Footer';
