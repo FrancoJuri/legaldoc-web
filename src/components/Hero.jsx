@@ -22,7 +22,7 @@ const Hero = () => (
               </div>
             </div>
             <p className="mt-3 text-xs text-indigo-100 sm:text-sm">
-              Los abogados ahorran un promedio de 5 horas por semana usando nuestra plataforma
+              Los abogados ahorran un promedio de 8 horas por semana usando nuestra plataforma
             </p>
           </div>
           

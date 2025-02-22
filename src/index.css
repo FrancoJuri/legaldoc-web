@@ -5,3 +5,29 @@
 html, body{
   scroll-behavior: smooth;
 }
+
+/* Estilos personalizados para el scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f8fd;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b82c5;
+  border-radius: 8px;
+  border: 2px solid #f2f8fd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d69ac;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2b82c5 #f2f8fd;
+}

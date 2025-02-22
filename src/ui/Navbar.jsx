@@ -38,19 +38,23 @@ const Navbar = () => {
         <header>
             {isMenuOpen && (
                 <div 
-                    className="fixed inset-0 top-[calc(100vh-280px)] md:top-16 bg-black bg-opacity-50"
+                    className="fixed inset-0 top-16 bg-black bg-opacity-50 z-40"
                     onClick={() => setIsMenuOpen(false)}
                 ></div>
             )}
             <nav className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
-                hasScrolled ? 'bg-white/95 backdrop-blur-sm' : 'bg-transparent'
+                isMenuOpen 
+                    ? 'bg-white' 
+                    : hasScrolled 
+                        ? 'bg-white/95 backdrop-blur-sm' 
+                        : 'bg-transparent'
             }`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link to="/" className="block h-8 w-auto">
-                            <Logo hasScrolled={hasScrolled} />
+                            <Logo hasScrolled={hasScrolled || isMenuOpen} />
                         </Link>
                     </div>
 
@@ -93,13 +97,13 @@ const Navbar = () => {
 
                     {/* Mobile menu button */}
                     <div className="flex items-center md:hidden">
-                        <Link to="/register" className="mr-4 bg-highlight hover:bg-highlight-600 text-white px-3 py-2 rounded-md text-sm font-medium shadow-md">
+                        <Link to="/register" className="mr-4 max-[370px]:mr-1 bg-highlight hover:bg-highlight-600 text-white px-3 py-2 rounded-md text-sm font-medium shadow-md max-[370px]:text-xs max-[370px]:px-2">
                             Probar Gratis
                         </Link>
                         <button 
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className={`inline-flex items-center justify-center p-2 rounded-md ${
-                                hasScrolled 
+                                hasScrolled || isMenuOpen
                                     ? 'text-gray-400 hover:text-gray-500 hover:bg-gray-100' 
                                     : 'text-white hover:text-white hover:bg-white/10'
                             } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
@@ -120,7 +124,13 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile menu */}
-                <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-white fixed inset-0 top-[64px] h-[calc(100vh-64px)] z-40`}>
+                <div 
+                    className={`md:hidden transform transition-all duration-300 ease-in-out ${
+                        isMenuOpen 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 -translate-y-2 pointer-events-none'
+                    } bg-white absolute w-full shadow-lg`}
+                >
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         <Link 
                             to="/" 
