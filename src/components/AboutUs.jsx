@@ -1,25 +1,22 @@
-
-
 const AboutUs = () => (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-base font-semibold text-primary-600 tracking-wide uppercase">Sobre nosotros</h2>
-          <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-            Transformando la práctica legal
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            Tenemos una misión clara
           </p>
         </div>
         <div className="mt-12 max-w-3xl mx-auto text-center">
           <p className="text-xl text-gray-500">
-            Fundamos LegalAI con una misión clara: revolucionar la forma en que los abogados trabajan con documentos
-            legales. Como ex abogados, experimentamos de primera mano la frustración de pasar incontables horas revisando
-            documentos extensos y complejos.
+            Fundamos <strong>LegalDoc</strong> con un propósito claro: &quot;Revolucionar el trabajo en el sector legal mediante la implementación de <strong>Inteligencia Artificial</strong>.&quot;
           </p>
           <p className="mt-4 text-xl text-gray-500">
-            Nos dimos cuenta de que la inteligencia artificial podía transformar este proceso, ahorrando tiempo valioso y
-            mejorando la precisión. Así nació nuestra plataforma, diseñada por abogados para abogados, con el objetivo de
-            liberar a los profesionales legales de las tareas repetitivas y permitirles enfocarse en lo que realmente
-            importa: proporcionar asesoramiento legal de alto valor a sus clientes.
+            Estamos en el <strong>auge de la inteligencia artificial</strong>, y no aprovechar su potencial es una gran desventaja.
+            Nos dimos cuenta de que podíamos dar el primer paso en nuestra misión resolviendo un problema tedioso para los abogados: <strong>el analisis de documentos.</strong>
+          </p>
+          <p className="mt-4 text-xl text-gray-500">
+            Así nació LegalDoc, una plataforma diseñada especialmente <strong>para abogados</strong>, con el objetivo de automatizar esta tarea repetitiva y permitirles <strong>enfocarse en lo que realmente importa</strong>: brindar asesoramiento legal de alto valor a sus clientes.
           </p>
         </div>
         <div className="mt-10">
@@ -29,8 +26,10 @@ const AboutUs = () => (
             alt="Fundador de LegalAI"
           />
           <div className="mt-3 text-center">
-            <p className="text-sm font-medium text-gray-900">María Rodríguez</p>
-            <p className="text-sm text-gray-500">Co-fundadora y CEO</p>
+            <p className="text-sm font-medium text-gray-900">
+              <a href="https://francojuri.com" target="_blank" className="hover:underline">Franco Juri</a>
+            </p>
+            <p className="text-sm text-gray-500">Fundador de LegalDoc - Desarrollador Web</p>
           </div>
         </div>
       </div>

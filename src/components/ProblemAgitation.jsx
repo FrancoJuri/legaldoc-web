@@ -22,8 +22,8 @@ const ProblemAgitation = () => (
                   "La fatiga y la presión pueden llevar a pasar por alto detalles cruciales en los documentos.",
               },
               {
-                title: "Costos elevados",
-                description: "El tiempo dedicado a la revisión manual se traduce en costos más altos para los clientes.",
+                title: "Falta de Organización",
+                description: "Los documentos pueden acumularse y volverse difíciles de gestionar sin una herramienta adecuada.",
               },
             ].map((item, index) => (
               <div key={index} className="relative">

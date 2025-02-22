@@ -6,7 +6,7 @@ const Features = () => (
         <div className="lg:text-center">
           <h2 className="text-base text-primary-600 font-semibold tracking-wide uppercase">Características</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Herramientas poderosas para abogados modernos
+            Herramienta poderosa para abogados modernos
           </p>
         </div>
   
@@ -14,20 +14,20 @@ const Features = () => (
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
             {[
               {
-                name: "Análisis de documentos",
-                description: "Sube tus documentos PDF y obtén un análisis detallado en segundos.",
+                name: "Análisis rápido de documentos",
+                description: "Analiza y resume documentos extensos en segundos, liberando tu tiempo para tareas más importantes.",
               },
               {
                 name: "Preguntas y respuestas",
                 description: "Haz preguntas específicas sobre el documento y obtén respuestas precisas al instante.",
               },
               {
-                name: "Resúmenes inteligentes",
-                description: "Genera resúmenes concisos de documentos extensos para una rápida revisión.",
+                name: "Transparencia en el análisis",
+                description: "Nuestra IA no solo proporciona respuestas, sino que también señala exactamente de qué parte del documento obtuvo la información.",
               },
               {
                 name: "Seguridad y privacidad",
-                description: "Tus documentos están seguros con nuestro cifrado de extremo a extremo.",
+                description: "Tus documentos están protegidos con medidas de seguridad para garantizar que solo tú puedas acceder a su contenido.",
               },
             ].map((feature) => (
               <div key={feature.name} className="relative">
