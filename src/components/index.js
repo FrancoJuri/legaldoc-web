@@ -5,3 +5,5 @@ export { default as Features } from './Features';
 export { default as FAQ } from './FAQ';
 export { default as AboutUs } from './AboutUs';
 export { default as Footer } from './Footer';
+export { default as PricingToggle } from './PricingToggle';
+export { default as PricingCard } from './PricingCard';

@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router"
 import { HomePage, PricingPage } from "../pages"
 import { Navbar } from "../ui"
+import { Footer } from "../components"
 
 
 
@@ -14,6 +15,7 @@ const AppRouter = () => {
 
             <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
+        <Footer />
     </>
   )
 }

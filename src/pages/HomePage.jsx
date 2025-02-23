@@ -1,4 +1,4 @@
-import { AboutUs, FAQ, Features, Footer, Hero, ProblemAgitation, Transformation } from "../components";
+import { AboutUs, FAQ, Features, Hero, ProblemAgitation, Transformation } from "../components";
 
 
 const HomePage = () => {
@@ -10,7 +10,6 @@ const HomePage = () => {
         <Features />
         <AboutUs />
         <FAQ />
-        <Footer />
     </div>
   )
 }

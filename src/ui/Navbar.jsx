@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { Logo } from "./";
 
 
 const Navbar = () => {
-
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hasScrolled, setHasScrolled] = useState(false);
+
+    const shouldShowBlur = () => {
+        return hasScrolled || isMenuOpen || location.pathname === '/precios';
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -45,7 +49,7 @@ const Navbar = () => {
             <nav className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
                 isMenuOpen 
                     ? 'bg-white' 
-                    : hasScrolled 
+                    : shouldShowBlur()
                         ? 'bg-white/95 backdrop-blur-sm' 
                         : 'bg-transparent'
             }`}>
@@ -54,7 +58,7 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link to="/" className="block h-8 w-auto">
-                            <Logo hasScrolled={hasScrolled || isMenuOpen} />
+                            <Logo hasScrolled={shouldShowBlur()} />
                         </Link>
                     </div>
 
@@ -64,11 +68,11 @@ const Navbar = () => {
                             <Link 
                                 to="/" 
                                 className={`${
-                                    hasScrolled 
+                                    shouldShowBlur()
                                         ? 'text-gray-800 hover:bg-gray-200' 
                                         : 'text-white hover:bg-white/10'
                                 } px-3 py-2 rounded-md text-sm font-medium ${
-                                    isCurrentPath('/') && (hasScrolled ? 'bg-gray-200' : 'bg-white/10')
+                                    isCurrentPath('/') && (shouldShowBlur() ? 'bg-gray-200' : 'bg-white/10')
                                 }`}
                             >
                                 Inicio
@@ -76,11 +80,11 @@ const Navbar = () => {
                             <Link 
                                 to="/precios" 
                                 className={`${
-                                    hasScrolled 
+                                    shouldShowBlur()
                                         ? 'text-gray-800 hover:bg-gray-200' 
                                         : 'text-white hover:bg-white/10'
                                 } px-3 py-2 rounded-md text-sm font-medium ${
-                                    isCurrentPath('/precios') && (hasScrolled ? 'bg-gray-200' : 'bg-white/10')
+                                    isCurrentPath('/precios') && (shouldShowBlur() ? 'bg-gray-200' : 'bg-white/10')
                                 }`}
                             >
                                 Precios
@@ -103,7 +107,7 @@ const Navbar = () => {
                         <button 
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className={`inline-flex items-center justify-center p-2 rounded-md ${
-                                hasScrolled || isMenuOpen
+                                shouldShowBlur()
                                     ? 'text-gray-400 hover:text-gray-500 hover:bg-gray-100' 
                                     : 'text-white hover:text-white hover:bg-white/10'
                             } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
