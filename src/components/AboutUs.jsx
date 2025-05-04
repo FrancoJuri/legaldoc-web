@@ -7,7 +7,7 @@ const AboutUs = () => (
             Tenemos una misión clara
           </p>
         </div>
-        <div className="mt-12 max-w-3xl mx-auto text-center">
+        <div className="mt-8 max-w-3xl mx-auto text-center">
           <p className="text-xl text-gray-500">
             Fundamos <strong>LegalDoc</strong> con un propósito claro: &quot;Revolucionar el trabajo en el sector legal mediante la implementación de <strong>Inteligencia Artificial</strong>.&quot;
           </p>
@@ -19,14 +19,14 @@ const AboutUs = () => (
             Así nació LegalDoc, una plataforma diseñada especialmente <strong>para abogados</strong>, con el objetivo de automatizar esta tarea repetitiva y permitirles <strong>enfocarse en lo que realmente importa</strong>: brindar asesoramiento legal de alto valor a sus clientes.
           </p>
         </div>
-        <div className="mt-10">
-          <img
+        <div className="mt-8">
+          {/* <img
             className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
             src="/placeholder.svg?height=224&width=224"
             alt="Fundador de LegalAI"
-          />
-          <div className="mt-3 text-center">
-            <p className="text-sm font-medium text-gray-900">
+          /> */}
+          <div className="text-center">
+            <p className="text-lg font-medium text-gray-900">
               <a href="https://francojuri.com" target="_blank" className="hover:underline">Franco Juri</a>
             </p>
             <p className="text-sm text-gray-500">Fundador de LegalDoc - Desarrollador Web</p>

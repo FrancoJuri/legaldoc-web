@@ -51,15 +51,15 @@ const PricingPage = () => {
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
         <PricingCard
           title="Pro"
-          price={isAnnual ? calculateAnnualPrice('5.999') : '5.999'}
-          fullPrice={calculateFullAnnualPrice('5.999')}
+          price={isAnnual ? calculateAnnualPrice('34.999') : '34.999'}
+          fullPrice={calculateFullAnnualPrice('35.000')}
           features={[
-            "180 recordatorios por mes",
-            "Reconocimiento de notas de voz",
-            "Recordatorios recurrentes",
-            "Creación de listas",
-            "Reconocimiento de imágenes",
-            "Múltiples recordatorios en un solo mensaje",
+            "Hasta 120 Documentos x Mes",
+            "Hasta 50 páginas x documento",
+            "+2.000 consultas x mes",
+            "Historial de hasta 120 documentos",
+            "Soporte por WhatsApp",
+            "Busqueda y analisis avanzado con IA",
           ]}
           highlighted={false}
           icon="📜"
@@ -70,15 +70,15 @@ const PricingPage = () => {
 
         <PricingCard
           title="Premium"
-          price={isAnnual ? calculateAnnualPrice('9.999') : '9.999'}
-          fullPrice={calculateFullAnnualPrice('9.999')}
+          price={isAnnual ? calculateAnnualPrice('59.999') : '59.999'}
+          fullPrice={calculateFullAnnualPrice('60.000')}
           features={[
-            "Recordatorios ilimitados",
-            "Reconocimiento de notas de voz",
-            "Recordatorios recurrentes",
-            "Creación de listas",
-            "Reconocimiento de imágenes",
-            "Múltiples recordatorios en un solo mensaje",
+            "Hasta 320 documentos x Mes",
+            "Hasta 120 páginas x documento",
+            "Consultas ilimitadas",
+            "Historial de hasta 320 documentos",
+            "Creacion de carpetas para mejor organización",
+            'Todo el resto del "Plan Pro"',
           ]}
           highlighted={true}
           icon="💎"

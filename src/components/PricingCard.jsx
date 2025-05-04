@@ -58,16 +58,18 @@ const PricingCard = ({
         ))}
       </ul>
 
-      <button 
-        className={`w-full py-3 px-4 rounded-lg flex items-center justify-center gap-2 ${
-          highlighted 
-            ? 'bg-white text-primary-500 hover:bg-gray-100' 
-            : 'bg-primary-500 text-white hover:bg-primary-600'
-        }`}
-      >
-        {buttonIcon}
-        {buttonText}
-      </button>
+      <a href="https://wa.link/3h6w62" target="_blank" rel="noopener noreferrer">
+        <button 
+          className={`w-full py-3 px-4 rounded-lg flex items-center justify-center gap-2 ${
+            highlighted 
+              ? 'bg-white text-primary-500 hover:bg-gray-100' 
+              : 'bg-primary-500 text-white hover:bg-primary-600'
+          }`}
+        >
+          {buttonIcon}
+          {buttonText}
+        </button>
+      </a>
     </div>
   );
 };

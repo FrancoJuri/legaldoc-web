@@ -1,22 +1,26 @@
+import legalDocFirst from '../assets/legaldoc-first.png';
+import legalDocSecond from '../assets/legaldoc-second.png';
+import legalDocThird from '../assets/legaldoc-third.png';
+
 const Transformation = () => {
   const steps = [
     {
       number: "1",
       title: "Sube tus documentos legales .PDF",
       description: "Carga fácilmente tus documentos legales en formato PDF a nuestra plataforma segura.",
-      image: "https://picsum.photos/800/600",
+      image: legalDocFirst,
     },
     {
       number: "2",
       title: "Abre un chat con tu documento legal",
       description: "Inicia una conversación interactiva con tu documento. Nuestra IA procesará y entenderá todo su contenido.",
-      image: "https://picsum.photos/800/600",
+      image: legalDocSecond,
     },
     {
       number: "3",
       title: "Pregunta lo que necesites!",
       description: "Obtén respuestas precisas y análisis detallados sobre cualquier aspecto de tu documento legal.",
-      image: "https://picsum.photos/800/600",
+      image: legalDocThird,
     },
   ];
 

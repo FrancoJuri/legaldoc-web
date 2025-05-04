@@ -26,7 +26,7 @@ const FAQ = () => {
         question: "¿Cuál es el costo de la plataforma?",
         answer: (
           <>
-            Tenemos los precios mas bajos del mercado (desde $20.000 pesos argentinos x mes) y somos la única plataforma especializada en el sector legal. Por ahora, ofrecemos 2 planes que puedes elegir. La diferencia entre ellos radica en la cantidad de documentos que puedes analizar y la longitud máxima de los mismos. Además, puedes probar nuestra plataforma de forma gratuita antes de decidirte.{' '}
+            Tenemos los precios mas bajos del mercado (desde $35.000 pesos argentinos x mes) y somos la única plataforma especializada en el sector legal. Por ahora, ofrecemos 2 planes que puedes elegir. La diferencia entre ellos radica en la cantidad de documentos que puedes analizar y la longitud máxima de los mismos. Además, puedes probar nuestra plataforma de forma gratuita antes de decidirte.{' '}
             <a 
               href="/precios" 
               className="text-blue-600 hover:text-blue-800 font-medium"
@@ -105,7 +105,7 @@ const FAQ = () => {
                 Estamos aquí para ayudarte con todas tus consultas
               </p>
               <a
-                href="https://wa.me/TUNUMERO"
+                href="https://wa.link/sikush"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-200"
