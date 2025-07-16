@@ -106,7 +106,7 @@ const FAQ = () => {
                 Estamos aquí para ayudarte con todas tus consultas
               </p>
               <a
-                href="https://wa.link/sikush"
+                href="https://wa.link/y6n04u"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-200"

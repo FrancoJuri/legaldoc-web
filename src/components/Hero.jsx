@@ -17,7 +17,7 @@ const Hero = () => (
             <div className="mt-8">
               <div className="space-y-4 sm:space-y-0 sm:inline-grid sm:grid-cols-1 sm:gap-5">
                 <a
-                  href="https://wa.link/09sns7"
+                  href="https://app.legaldoc.site"
                   target='_blank'
                   rel='noopener noreferrer'
                   className="flex items-center justify-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-700 bg-white hover:bg-primary-50 sm:px-6"

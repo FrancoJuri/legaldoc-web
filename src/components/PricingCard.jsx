@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const PricingCard = ({ 
   title, 
   price,
@@ -9,6 +11,9 @@ const PricingCard = ({
   buttonText,
   isAnnual 
 }) => {
+
+  const whatsappLink = title === 'Pro' ? 'https://wa.link/om143h' : 'https://wa.link/kyhvwf';
+
   return (
     <div className={`rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
       highlighted 
@@ -58,8 +63,10 @@ const PricingCard = ({
         ))}
       </ul>
 
-      <a href="https://wa.link/3h6w62" target="_blank" rel="noopener noreferrer">
-        <button 
+        <Link 
+          to={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`w-full py-3 px-4 rounded-lg flex items-center justify-center gap-2 ${
             highlighted 
               ? 'bg-white text-primary-500 hover:bg-gray-100' 
@@ -68,8 +75,7 @@ const PricingCard = ({
         >
           {buttonIcon}
           {buttonText}
-        </button>
-      </a>
+        </Link>
     </div>
   );
 };

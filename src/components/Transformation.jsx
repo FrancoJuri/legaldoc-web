@@ -19,7 +19,7 @@ const Transformation = () => {
     {
       number: "3",
       title: "Pregunta lo que necesites!",
-      description: "Obtén respuestas precisas y análisis detallados sobre cualquier aspecto de tu documento legal.",
+      description: "Obtén respuestas precisas y análisis detallados sobre cualquier aspecto de tu documento legal. Además, podrás saber de que parte del documento se busca la información.",
       image: legalDocThird,
     },
   ];
