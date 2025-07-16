@@ -49,17 +49,16 @@ const PricingPage = () => {
       <PricingToggle isAnnual={isAnnual} setIsAnnual={setIsAnnual} />
 
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
-        <PricingCard
+      <PricingCard
           title="Pro"
-          price={isAnnual ? calculateAnnualPrice('34.999') : '34.999'}
-          fullPrice={calculateFullAnnualPrice('35.000')}
+          price={isAnnual ? calculateAnnualPrice('28.999') : '28.999'}
+          fullPrice={calculateFullAnnualPrice('28.999')}
           features={[
-            "Hasta 120 Documentos x Mes",
-            "Hasta 50 páginas x documento",
-            "+2.000 consultas x mes",
-            "Historial de hasta 120 documentos",
-            "Soporte por WhatsApp",
-            "Busqueda y analisis avanzado con IA",
+            "Hasta 100 documentos analizados x mes",
+            `Consultas ilimitadas por documento`,
+            "Hasta 75 páginas por documento",
+            "Historial de hasta 150 chats guardados",
+            "Único sistema especializado en el sector legal!",
           ]}
           highlighted={false}
           icon="📜"
@@ -71,14 +70,13 @@ const PricingPage = () => {
         <PricingCard
           title="Premium"
           price={isAnnual ? calculateAnnualPrice('59.999') : '59.999'}
-          fullPrice={calculateFullAnnualPrice('60.000')}
+          fullPrice={calculateFullAnnualPrice('59.999')}
           features={[
-            "Hasta 320 documentos x Mes",
-            "Hasta 120 páginas x documento",
-            "Consultas ilimitadas",
-            "Historial de hasta 320 documentos",
-            "Creacion de carpetas para mejor organización",
-            'Todo el resto del "Plan Pro"',
+            "Hasta 350 documentos analizados x mes",
+            `Consultas ilimitadas por documento`,
+            "Hasta 200 páginas por documento",
+            "Historial de hasta 400 chats guardados",
+            "Todo lo que ya incluye el plan Pro",
           ]}
           highlighted={true}
           icon="💎"

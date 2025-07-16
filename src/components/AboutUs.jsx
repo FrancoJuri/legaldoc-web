@@ -1,3 +1,5 @@
+import francoJuriImg from '../assets/francojuri-founder.png';
+
 const AboutUs = () => (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
@@ -20,16 +22,16 @@ const AboutUs = () => (
           </p>
         </div>
         <div className="mt-8">
-          {/* <img
+          <img
             className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
-            src="/placeholder.svg?height=224&width=224"
+            src={francoJuriImg}
             alt="Fundador de LegalAI"
-          /> */}
-          <div className="text-center">
+          /> 
+          <div className="text-center mt-4">
             <p className="text-lg font-medium text-gray-900">
               <a href="https://francojuri.com" target="_blank" className="hover:underline">Franco Juri</a>
             </p>
-            <p className="text-sm text-gray-500">Fundador de LegalDoc - Desarrollador Web</p>
+            <p className="text-sm text-gray-500">Fundador de LegalDoc - Desarrollador de Software</p>
           </div>
         </div>
       </div>

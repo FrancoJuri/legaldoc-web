@@ -1,4 +1,5 @@
 import { useState} from 'react';
+import { Link } from 'react-router';
 
 const FAQ = () => {
     const faqs = [
@@ -26,13 +27,13 @@ const FAQ = () => {
         question: "¿Cuál es el costo de la plataforma?",
         answer: (
           <>
-            Tenemos los precios mas bajos del mercado (desde $35.000 pesos argentinos x mes) y somos la única plataforma especializada en el sector legal. Por ahora, ofrecemos 2 planes que puedes elegir. La diferencia entre ellos radica en la cantidad de documentos que puedes analizar y la longitud máxima de los mismos. Además, puedes probar nuestra plataforma de forma gratuita antes de decidirte.{' '}
-            <a 
-              href="/precios" 
+            Tenemos los precios mas bajos del mercado (desde $28.999 pesos argentinos x mes) y somos la única plataforma especializada en el sector legal. Por ahora, ofrecemos 2 planes que puedes elegir. La diferencia entre ellos radica en la cantidad de documentos que puedes analizar y la longitud máxima de los mismos. Además, puedes probar nuestra plataforma de forma gratuita antes de decidirte.{' '}
+            <Link
+              to="/precios" 
               className="text-blue-600 hover:text-blue-800 font-medium"
             >
               Ver precios
-            </a>
+            </Link>
           </>
         ),
       },
