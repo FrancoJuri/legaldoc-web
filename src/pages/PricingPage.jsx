@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PricingToggle, PricingCard } from '../components';
+import { detectUserCountry, getCurrencyByCountry } from '../utils/countryDetection';
 
 const WhatsAppIcon = () => (
   <svg
@@ -14,6 +15,33 @@ const WhatsAppIcon = () => (
 
 const PricingPage = () => {
   const [isAnnual, setIsAnnual] = useState(false);
+  const [currency, setCurrency] = useState('ARS');
+  const [countryCode, setCountryCode] = useState(null);
+
+  useEffect(() => {
+    if(countryCode) return;
+
+    const getIpData = async () => {
+      const { countryCode: code } = await detectUserCountry();
+      const currencyByCountry = getCurrencyByCountry(code);
+      setCountryCode(code);
+      setCurrency(currencyByCountry);
+    }
+
+    getIpData();
+  }, [countryCode])
+
+  // Pricing data for both currencies
+  const pricing = {
+    ARS: {
+      pro: '28.999',
+      premium: '59.999'
+    },
+    USD: {
+      pro: '24.99',
+      premium: '54.99'
+    }
+  };
 
   const roundUpToNearestTen = (number) => {
     return Math.ceil(number / 10) * 10;
@@ -24,17 +52,25 @@ const PricingPage = () => {
   };
 
   const calculateAnnualPrice = (monthlyPrice) => {
-    const basePrice = parseFloat(monthlyPrice.replace('.', ''));
+    const basePrice = currency === 'ARS' 
+      ? parseFloat(monthlyPrice.replace('.', '')) 
+      : parseFloat(monthlyPrice);
     const annualPrice = basePrice * 9;
     const roundedPrice = roundDownToNearestTen(annualPrice);
-    return roundedPrice.toLocaleString('es-AR');
+    return currency === 'ARS' 
+      ? roundedPrice.toLocaleString('es-AR')
+      : roundedPrice.toLocaleString('en-US');
   };
 
   const calculateFullAnnualPrice = (monthlyPrice) => {
-    const basePrice = parseFloat(monthlyPrice.replace('.', ''));
+    const basePrice = currency === 'ARS' 
+      ? parseFloat(monthlyPrice.replace('.', '')) 
+      : parseFloat(monthlyPrice);
     const fullPrice = basePrice * 12;
     const roundedPrice = roundUpToNearestTen(fullPrice);
-    return roundedPrice.toLocaleString('es-AR');
+    return currency === 'ARS' 
+      ? roundedPrice.toLocaleString('es-AR')
+      : roundedPrice.toLocaleString('en-US');
   };
 
   return (
@@ -51,8 +87,9 @@ const PricingPage = () => {
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
       <PricingCard
           title="Pro"
-          price={isAnnual ? calculateAnnualPrice('28.999') : '28.999'}
-          fullPrice={calculateFullAnnualPrice('28.999')}
+          price={isAnnual ? calculateAnnualPrice(pricing[currency].pro) : pricing[currency].pro}
+          fullPrice={calculateFullAnnualPrice(pricing[currency].pro)}
+          currency={currency}
           features={[
             "Hasta 100 documentos analizados x mes",
             `Consultas ilimitadas por documento`,
@@ -69,8 +106,9 @@ const PricingPage = () => {
 
         <PricingCard
           title="Premium"
-          price={isAnnual ? calculateAnnualPrice('59.999') : '59.999'}
-          fullPrice={calculateFullAnnualPrice('59.999')}
+          price={isAnnual ? calculateAnnualPrice(pricing[currency].premium) : pricing[currency].premium}
+          fullPrice={calculateFullAnnualPrice(pricing[currency].premium)}
+          currency={currency}
           features={[
             "Hasta 350 documentos analizados x mes",
             `Consultas ilimitadas por documento`,

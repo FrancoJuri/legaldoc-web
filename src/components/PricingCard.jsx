@@ -9,7 +9,8 @@ const PricingCard = ({
   icon, 
   buttonIcon, 
   buttonText,
-  isAnnual 
+  isAnnual,
+  currency = 'ARS',
 }) => {
 
   const whatsappLink = title === 'Pro' ? 'https://wa.link/om143h' : 'https://wa.link/kyhvwf';
@@ -29,13 +30,13 @@ const PricingCard = ({
         {isAnnual && (
           <div className="text-sm mb-1">
             <span className={`line-through ${highlighted ? 'text-gray-200' : 'text-gray-500'}`}>
-              ARS ${fullPrice}
+              {currency} ${fullPrice}
             </span>
             <span className={`ml-1 ${highlighted ? 'text-gray-200' : 'text-gray-500'}`}>por año</span>
           </div>
         )}
         <div>
-          <span className="text-3xl font-bold">ARS ${price}</span>
+          <span className="text-3xl font-bold">{currency} ${price}</span>
           <span className="text-sm ml-1">{isAnnual ? 'por año' : 'por mes'}</span>
         </div>
       </div>
