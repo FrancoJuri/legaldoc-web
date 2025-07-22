@@ -94,14 +94,14 @@ const Navbar = () => {
 
                     {/* Right side buttons - Only visible on desktop */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <Link to="https://app.legaldoc.site" target="_blank" rel="noopener noreferrer" className="bg-highlight hover:bg-highlight-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-md">
+                        <Link to="https://app.doculegal.site" target="_blank" rel="noopener noreferrer" className="bg-highlight hover:bg-highlight-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-md">
                             Probar Gratis
                         </Link>
                     </div>
 
                     {/* Mobile menu button */}
                     <div className="flex items-center md:hidden">
-                        <Link to="https://app.legaldoc.site" target="_blank" rel="noopener noreferrer" className="mr-4 max-[370px]:mr-1 bg-highlight hover:bg-highlight-600 text-white px-3 py-2 rounded-md text-sm font-medium shadow-md max-[370px]:text-xs max-[370px]:px-2">
+                        <Link to="https://app.doculegal.site" target="_blank" rel="noopener noreferrer" className="mr-4 max-[370px]:mr-1 bg-highlight hover:bg-highlight-600 text-white px-3 py-2 rounded-md text-sm font-medium shadow-md max-[370px]:text-xs max-[370px]:px-2">
                             Probar Gratis
                         </Link>
                         <button 

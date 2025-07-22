@@ -17,7 +17,7 @@ const Hero = () => (
             <div className="mt-8">
               <div className="space-y-4 sm:space-y-0 sm:inline-grid sm:grid-cols-1 sm:gap-5">
                 <a
-                  href="https://app.legaldoc.site"
+                  href="https://app.doculegal.site"
                   target='_blank'
                   rel='noopener noreferrer'
                   className="flex items-center justify-center px-4 py-2.5 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-700 bg-white hover:bg-primary-50 sm:px-6"
@@ -36,7 +36,7 @@ const Hero = () => (
               <img 
                 src={legalDocHero}
                 className="max-w-full max-h-[500px] w-auto h-auto rounded-lg shadow-xl transition-all duration-300 ease-out hover:shadow-2xl transform-gpu group-hover:translate-y-[-2px] hover:rotate-y-[-2deg] hover:rotate-x-[2deg] hidden max-[480px]:hidden min-[481px]:block"
-                alt="Sistema LegalDoc Desktop"
+                alt="Sistema DocuLegal Desktop"
                 onMouseMove={(e) => {
                   const el = e.currentTarget;
                   const rect = el.getBoundingClientRect();
@@ -60,7 +60,7 @@ const Hero = () => (
               <img 
                 src={legalDocHeroResponsive}
                 className="max-w-full max-h-[500px] w-auto h-auto rounded-lg shadow-xl block min-[481px]:hidden"
-                alt="Sistema LegalDoc Mobile"
+                alt="Sistema DocuLegal Mobile"
               />
             </div>
           </div>

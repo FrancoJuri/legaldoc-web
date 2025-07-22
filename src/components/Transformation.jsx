@@ -33,7 +33,7 @@ const Transformation = () => {
             Transforma tu práctica legal con IA
           </p>
           <p className="mt-4 text-xl text-gray-500">
-            Mira como funciona LegalDoc
+            Mira como funciona DocuLegal
           </p>
         </div>
 

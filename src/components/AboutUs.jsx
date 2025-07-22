@@ -11,14 +11,14 @@ const AboutUs = () => (
         </div>
         <div className="mt-8 max-w-3xl mx-auto text-center">
           <p className="text-xl text-gray-500">
-            Fundamos <strong>LegalDoc</strong> con un propósito claro: &quot;Revolucionar el trabajo en el sector legal mediante la implementación de <strong>Inteligencia Artificial</strong>.&quot;
+            Fundamos <strong>DocuLegal</strong> con un propósito claro: &quot;Revolucionar el trabajo en el sector legal mediante la implementación de <strong>Inteligencia Artificial</strong>.&quot;
           </p>
           <p className="mt-4 text-xl text-gray-500">
             Estamos en el <strong>auge de la inteligencia artificial</strong>, y no aprovechar su potencial es una gran desventaja.
             Nos dimos cuenta de que podíamos dar el primer paso en nuestra misión resolviendo un problema tedioso para los abogados: <strong>el analisis de documentos.</strong>
           </p>
           <p className="mt-4 text-xl text-gray-500">
-            Así nació LegalDoc, una plataforma diseñada especialmente <strong>para abogados</strong>, con el objetivo de automatizar esta tarea repetitiva y permitirles <strong>enfocarse en lo que realmente importa</strong>: brindar asesoramiento legal de alto valor a sus clientes.
+            Así nació DocuLegal, una plataforma diseñada especialmente <strong>para abogados</strong>, con el objetivo de automatizar esta tarea repetitiva y permitirles <strong>enfocarse en lo que realmente importa</strong>: brindar asesoramiento legal de alto valor a sus clientes.
           </p>
         </div>
         <div className="mt-8">
@@ -31,7 +31,7 @@ const AboutUs = () => (
             <p className="text-lg font-medium text-gray-900">
               <a href="https://francojuri.com" target="_blank" className="hover:underline">Franco Juri</a>
             </p>
-            <p className="text-sm text-gray-500">Fundador de LegalDoc - Desarrollador de Software</p>
+            <p className="text-sm text-gray-500">Fundador de DocuLegal - Desarrollador de Software</p>
           </div>
         </div>
       </div>
