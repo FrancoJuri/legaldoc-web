@@ -13,7 +13,7 @@ const PricingCard = ({
   currency = 'ARS',
 }) => {
 
-  const whatsappLink = title === 'Pro' ? 'https://wa.link/om143h' : 'https://wa.link/kyhvwf';
+  const whatsappLink = title === 'Pro' ? 'https://wa.link/elcqyn' : 'https://wa.link/nde71q';
 
   return (
     <div className={`rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
