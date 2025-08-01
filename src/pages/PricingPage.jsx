@@ -91,9 +91,10 @@ const PricingPage = () => {
           fullPrice={calculateFullAnnualPrice(pricing[currency].pro)}
           currency={currency}
           features={[
-            "Hasta 100 documentos analizados x mes",
+            "Hasta 7.500 páginas analizadas x mes",
+            "Documentos ilimitados",
             `Consultas ilimitadas por documento`,
-            "Hasta 75 páginas por documento",
+            "Hasta 350 páginas por documento",
             "Historial de hasta 150 chats guardados",
             "Único sistema especializado en el sector legal!",
           ]}
@@ -110,10 +111,11 @@ const PricingPage = () => {
           fullPrice={calculateFullAnnualPrice(pricing[currency].premium)}
           currency={currency}
           features={[
-            "Hasta 350 documentos analizados x mes",
+            "Hasta 20.000 páginas analizadas x mes",
+            "Documentos ilimitados",
             `Consultas ilimitadas por documento`,
-            "Hasta 200 páginas por documento",
-            "Historial de hasta 400 chats guardados",
+            "Hasta 500 páginas por documento",
+            "Historial de hasta 300 chats guardados",
             "Todo lo que ya incluye el plan Pro",
           ]}
           highlighted={true}
